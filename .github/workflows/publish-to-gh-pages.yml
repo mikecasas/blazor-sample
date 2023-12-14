@@ -23,6 +23,9 @@ jobs:
       with:
         dotnet-version: 8.x
 
+    - name: Publish .NET Core Project
+      run: ls
+
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
       run: dotnet publish BlazorSample.csproj -c Release -o release --nologo
