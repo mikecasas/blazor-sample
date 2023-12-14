@@ -23,12 +23,12 @@ jobs:
       with:
         dotnet-version: 8.x
 
-    - name: Publish .NET Core Project
+    - name: List the contents to see what folder directory I am in
       run: ls
 
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
-      run: dotnet publish BlazorSample.csproj -c Release -o release --nologo
+      run: dotnet publish ./BlazorSample.csproj -c Release -o release --nologo
     
     - name: Change <base href="" /> in App.razor to match gh repo name
       run: |
